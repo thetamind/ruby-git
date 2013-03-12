@@ -330,6 +330,10 @@ module Git
       self.lib.checkout_file(version,file)
     end
 
+    def show_file(version,file)
+      self.lib.show_file(version,file)
+    end
+    
     # fetches changes from a remote branch - this does not modify the working directory,
     # it just gets the changes from the remote if there are any
     def fetch(remote = 'origin', opts={})

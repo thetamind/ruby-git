@@ -534,6 +534,12 @@ module Git
       arr_opts << file
       command('checkout', arr_opts)
     end
+
+    def show_file(version, file)
+      arr_opts = []
+      arr_opts << "#{version}:#{file}"
+      command('show', arr_opts)
+    end
     
     def merge(branch, message = nil)      
       arr_opts = []
